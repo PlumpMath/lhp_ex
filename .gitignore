@@ -1,0 +1,5 @@
+node_modules
+gulpfile.js
+Procfile
+public/style.scss
+models/data

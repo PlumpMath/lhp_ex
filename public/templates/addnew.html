@@ -1,0 +1,23 @@
+<form name="myForm" ng-submit="myForm.$valid && newContact(user)">
+	<md-content class="md-no-momentum">
+		<div layout="row">
+	    <md-input-container class="md-icon-float md-block col-md-4">
+	      <label>Name (required)</label>
+	      <md-icon md-svg-src="img/icons/ic_person_black_24px.svg" class="name"></md-icon>
+	      <input ng-model="user.name" type="text" ng-required="true">
+	    </md-input-container>
+		</div>
+
+		<div layout="row">
+	    <md-input-container class="md-block col-md-4">
+	      <md-icon md-svg-src="img/icons/ic_email_black_24px.svg" class="email"></md-icon>
+	      <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
+	    </md-input-container>
+		</div>
+
+	  <div layout="row">
+	    <md-button type="submit" class="col-md-2">Add</md-button>
+	    <md-button type="button" ui-sref="home" class="col-md-2">Go back home</md-button>
+	  </div>
+  </md-content>
+</form>

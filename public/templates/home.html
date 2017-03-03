@@ -1,0 +1,12 @@
+<div>
+	<h2>My Contacts</h2>
+
+	<button class="btn btn-primary" id="mybutton" ui-sref="addnew"> + Add new Contact</button>
+	<hr>
+	<input type="text" id="myInput" ng-keyup="search(searchname)" placeholder='Search for names..'  ng-model="searchname">
+
+	<ul id="myUL">
+	  <li><a href="#" class="header">Contact list</a></li>
+	  <li ng-repeat="contact in contactList | orderBy:'name' track by $index"><a>{{contact.name}} - {{contact.email}}</a></li>
+	</ul>
+</div>
