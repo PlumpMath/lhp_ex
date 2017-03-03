@@ -2,6 +2,7 @@
 	<h2>My Contacts</h2>
 
 	<button class="btn btn-primary" id="mybutton" ui-sref="addnew"> + Add new Contact</button>
+	<button ng-click="import()" ng-show="notImported">Import Dummy Data to the database</button>
 	<hr>
 	<input type="text" id="myInput" ng-keyup="search(searchname)" placeholder='Search for names..'  ng-model="searchname">
 
