@@ -4,6 +4,7 @@ app.controller("mainCtrl", ['$scope', '$state', 'service', function($scope, $sta
 
   service.getcontacts().then(function (data) {
     $scope.contactList = data.data
+    $scope.notImported = false;
   })
 
   $scope.search = function (input) {
@@ -31,8 +32,6 @@ app.controller("mainCtrl", ['$scope', '$state', 'service', function($scope, $sta
     for (var j=0; j<hardcoded.length; j++) {
       service.addnew(hardcoded[j])
     }
-
-    $scope.notImported = false;
 
     service.getcontacts().then(function (data) {
       $scope.contactList = data.data

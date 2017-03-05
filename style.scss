@@ -1,0 +1,63 @@
+$bordergrey: #ddd;
+$backgroundgrey: #e2e2e2;
+$hovergrey: #eee;
+$white: #f6f6f6;
+$validgreen: #78FA89;
+$invalidred: #b62421;
+
+body {
+  margin: auto 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('../img/search-512.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid $bordergrey;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    a {
+      border: 1px solid $bordergrey;
+      margin-top: -2px;
+      background-color: $white;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      color: black;
+      display: block
+    }
+
+    a.header {
+      background-color: $backgroundgrey;
+      cursor: default;
+    }
+
+    a:hover:not(.header) {
+      background-color: $hovergrey;
+    }
+  }
+}
+
+
+
+input.form.ng-valid {
+  background-color: $validgreen;
+}
+
+input.form.ng-invalid {
+  background-color: $invalidred;
+}
